@@ -29,11 +29,19 @@
         <img class="rez__img" src="../../static/img/planet_medium.svg" alt="">
         <span>Su resultado {{result}} kWh</span>
         <span>La eficiencia energética de tu hogar es media</span>
+        <span>¿Quieres hacer del mundo un lugar más ecológico? ¡Rellena el formulario y haremos una eco-construcción para ti!</span>
+
+        <a class="main__link" href="{{ url_for('form') }}">Rellene el formulario</a>
+
         {%elif result >= 300%}
         <img class="rez__img" src="../../static/img/planet_bad.svg" alt="">
         <span>Su resultado {{result}} kWh</span>
         <span>¡La eficiencia energética de tu hogar está por debajo de la media!</span>
         {%endif%}
+
+       <a class="main__link" href="{{ url_for('form') }}">Rellene el formulario</a>
+
+        <span>¿Quieres hacer del mundo un lugar más ecológico? ¡Rellena el formulario y haremos una eco-construcción para ti!</span>
     </div>
     {% endblock %}
   </main>
